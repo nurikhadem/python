@@ -1,0 +1,12 @@
+pyg = 'ay' #pig latin syllable
+original = raw_input('Enter a word:')#input prompt for word to be translated
+
+if len(original) > 0 and original.isalpha():#checks whether input contains anything and is alphabetical
+  word = original.lower()
+  first = word[0]
+  new_word = word[1:len(word)]+first+pyg# word from second to last letter concatenated with first letter and the pig latin syllable
+  print original# word gets printed
+  print new_word
+else:
+  print 'empty'#empty word gets printed
+
