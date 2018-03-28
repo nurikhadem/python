@@ -12,3 +12,18 @@ def plane_ride_cost(city):
     return 475
   else:
   	return "I don't know the price for a flight to this city."
+    
+  def rental_car_cost(days):
+    cost = days * 40
+    if days >= 7:
+    	cost -= 50
+    elif days >= 3:
+      cost -= 20
+    return cost
+
+def trip_cost(city, days, spending_money):
+  return hotel_cost(days - 1) + plane_ride_cost(city) + rental_car_cost(days) + spending_money
+
+full_cost = trip_cost("Los Angeles", 5, 600)
+
+print ("The trip will cost %d $" % (full_cost))
